@@ -16,15 +16,8 @@ table {
 h1, h2{
     text-align: center;
 }
-.titulo{
-    text-align: center;
-}
+
 .tt{
     text-align: center;
 }
 
-.btn{
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-}
