@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">   
+    <title>Docker Compose</title>
+</head>
+<body>
+    <div class="titulo">
+        <h1>DATOS</h1>
+    </div>
+    <div class="btn">
+        <form action="/crear_datos" method="POST">
+            <button type="submit">Crear registros</button>
+        </form>
+        <form action="/eliminar_datos" method="POST">
+            <button type="submit">Eliminar registros</button>
+        </form>
+    </div>
+        
+    <table border="1">
+        <thead>
+            <th class="tt">Nombre</th>
+            <th class="tt">Dia mes</th>
+            <th class="tt">Dia semana</th>
+            <th class="tt">Pais</th>
+            <th class="tt">Palabra</th>
+        </thead>
+        <tbody>
+
+            {% for i in datos %}
+                <tr>
+                    <td class="tt">{{i.first_name}}</td>
+                    <td class="tt">{{i.day_of_month}}</td>
+                    <td class="tt">{{i.day_of_week}}</td>
+                    <td class="tt">{{i.country}}</td>
+                    <td class="tt">{{i.word}}</td>
+                </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+
+</body>
+</html>
